@@ -3,12 +3,7 @@ plugins:
     default: true
     client: true
 
-  banner_image:
-    type: upload
-    default: "assets/simple_banner.png"
-    description: default banner for site
-
-  rotate_banner:
-    default: "https://i.imgur.com/ES1JXM3.png|https://i.imgur.com/NefzwFH.png|https://i.imgur.com/ZbN5Fr8.png"
+  banner_images:
+    default: "https://picsum.photos/1500/600"
     type: list
-    description: randomly chosen banners
+    client: true

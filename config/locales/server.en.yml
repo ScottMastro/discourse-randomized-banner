@@ -1,4 +1,4 @@
 en:
   site_settings:
-    enable_banner: 'Turn on the banner plugin'
-    
+    enable_banner: "Turn on the banner plugin"
+    banner_images: "Banner will be randomly chosen from this list of URLs"

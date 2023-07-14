@@ -9,4 +9,5 @@
 
 enabled_site_setting :enable_banner
 
-
+register_asset 'stylesheets/common/common.scss'
+register_asset 'stylesheets/mobile/mobile.scss', :mobile
