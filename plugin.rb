@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# name: discourse-e4-banner
+# name: discourse-e4-banner-plugin
 # version: 1.0.0
 # authors: ScottMastro
 # url: https://github.com/ScottMastro/discourse-e4-banner-plugin
