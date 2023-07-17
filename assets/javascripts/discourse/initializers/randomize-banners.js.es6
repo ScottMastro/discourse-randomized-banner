@@ -13,15 +13,20 @@ export default {
 function randomizeBanner(api, siteSettings) {
   var str = siteSettings.banner_images;
   var banners = str.split('|');
+  var img;
 
-  if (banners.length > 0) {
-    var num = Math.floor( Math.random() * banners.length);
-    var img = banners[num];
-
-    api.registerConnectorClass('above-main-container', 'banner', {
-      setupComponent(attrs, component) {
-        component.setProperties({"selected-banner": img});
-      }
-    });
+  const currentUser = api.getCurrentUser();
+  if (!currentUser && siteSettings.guest_banner){
+    img = siteSettings.guest_banner;
   }
+  else if (banners.length > 0) {
+    var num = Math.floor( Math.random() * banners.length);
+    img = banners[num];
+  }
+  api.registerConnectorClass('above-main-container', 'banner', {
+    setupComponent(attrs, component) {
+      component.setProperties({"selected_banner": img});
+    }
+  });
+
 }

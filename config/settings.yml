@@ -3,6 +3,13 @@ plugins:
     default: true
     client: true
 
+  optimize_lcp:
+    default: true
+    
+  guest_banner:
+    default: ""
+    client: true
+
   banner_images:
     default: "https://picsum.photos/1500/600"
     type: list
