@@ -13,6 +13,14 @@ register_asset 'stylesheets/common/common.scss'
 register_asset 'stylesheets/mobile/mobile.scss', :mobile
 
 register_html_builder('server:before-head-close') do
+  if SiteSetting.guest_banner && SiteSetting.optimize_lcp
+    %Q(<link rel="preload" as="image" href="#{SiteSetting.guest_banner}">)
+  else
+    ''
+  end
+end
+
+register_html_builder('server:before-head-close') do
   if SiteSetting.optimize_lcp
     SiteSetting.banner_images.split('|').map do |url|
       %Q(<link rel="prefetch" as="image" href="#{url}">)
@@ -22,10 +30,3 @@ register_html_builder('server:before-head-close') do
   end
 end
 
-register_html_builder('server:before-head-close') do
-  if SiteSetting.guest_banner && SiteSetting.optimize_lcp
-    %Q(<link rel="preload" as="image" href="#{SiteSetting.guest_banner}">)
-  else
-    ''
-  end
-end
