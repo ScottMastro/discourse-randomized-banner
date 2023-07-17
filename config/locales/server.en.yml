@@ -1,6 +1,6 @@
 en:
   site_settings:
     enable_banner: "Turn on the banner plugin"
-    optimize_lcp: "Add a prefetch tag for banner_images and preload to guest_banner. Improves LCP but add slight upfront cost."
-    guest_banner: "Only show this banner to users not logged in. Leave empty to show guests banners from banner_images."
+    optimize_lcp: "Add a image preload to guest_banner"
+    guest_banner: "Only show this banner to users not logged in, leave empty to show guests banners from banner_images"
     banner_images: "Banner will be randomly chosen from this list of URLs"

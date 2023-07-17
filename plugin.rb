@@ -20,13 +20,13 @@ register_html_builder('server:before-head-close') do
   end
 end
 
-register_html_builder('server:before-head-close') do
-  if SiteSetting.optimize_lcp
-    SiteSetting.banner_images.split('|').map do |url|
-      %Q(<link rel="prefetch" as="image" href="#{url}">)
-    end.join("\n")
-  else
-    ''
-  end
-end
+#register_html_builder('server:before-head-close') do
+#  if SiteSetting.optimize_lcp
+#    SiteSetting.banner_images.split('|').map do |url|
+#      %Q(<link rel="prefetch" as="image" href="#{url}">)
+#    end.join("\n")
+#  else
+#    ''
+#  end
+#end
 
