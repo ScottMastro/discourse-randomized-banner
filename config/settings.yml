@@ -1,16 +1,24 @@
 plugins:
-  enable_banner:
+  enable_randomized_banner:
     default: true
     client: true
 
   optimize_lcp:
     default: true
     
+  banner_aspect_ratio:
+    default: 2.569
+    client: true
+    
+  override_banner:
+    default: ""
+    client: true
+    
   guest_banner:
     default: ""
     client: true
-
+    
   banner_images:
-    default: "https://picsum.photos/1500/600"
+    default: "https://picsum.photos/925/360"
     type: list
     client: true

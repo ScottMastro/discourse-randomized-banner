@@ -1,11 +1,15 @@
-.banner-center {
+#randomized-banner-container {
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1em;
-  //max-width: 90%;
 }
 
-.has-full-page-chat .banner-center {
+#randomized-banner {
+  width: 100%;
+  max-height: 100%;
+}
+
+.has-full-page-chat #randomized-banner-container {
   display: none;
 }
