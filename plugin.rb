@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-# name: discourse-e4-banner-plugin
-# version: 1.0.0
+# name: discourse-random-banner-plugin
+# version: 1.1.0
 # authors: ScottMastro
-# url: https://github.com/ScottMastro/discourse-e4-banner-plugin
+# url: https://github.com/ScottMastro/discourse-random-banner-plugin
 # required_version: 2.7.0
 # transpile_js: true
 
