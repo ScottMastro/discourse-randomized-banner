@@ -9,7 +9,11 @@ plugins:
   banner_aspect_ratio:
     default: 2.569
     client: true
-    
+
+  banner_max_height:
+    default: "500px"
+    client: true
+
   override_banner:
     default: ""
     client: true
