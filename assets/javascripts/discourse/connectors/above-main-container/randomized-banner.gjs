@@ -5,6 +5,15 @@ import { service } from "@ember/service";
 import { htmlSafe } from "@ember/template";
 
 export default class RandomizedBanner extends Component {
+  static shouldRender(args, context) {
+    return (
+      context.siteSettings.enable_randomized_banner &&
+      (context.siteSettings.override_banner?.trim()?.length > 0 ||
+        context.siteSettings.guest_banner?.trim()?.length > 0 ||
+        context.siteSettings.banner_images?.trim()?.length > 0)
+    );
+  }
+
   @service siteSettings;
   @service currentUser;
 
@@ -13,16 +22,7 @@ export default class RandomizedBanner extends Component {
   constructor() {
     super(...arguments);
 
-    const {
-      enable_randomized_banner,
-      override_banner,
-      guest_banner,
-      banner_images,
-    } = this.siteSettings;
-
-    if (!enable_randomized_banner) {
-      return;
-    }
+    const { override_banner, guest_banner, banner_images } = this.siteSettings;
 
     if (override_banner) {
       this.bannerSrc = override_banner;
