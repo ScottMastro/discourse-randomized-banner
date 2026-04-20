@@ -2,7 +2,7 @@
 
 # name: discourse-randomized-banner
 # about: Inserts a randomized banner below the header
-# version: 1.2
+# version: 1.3
 # authors: ScottMastro
 # url: https://github.com/ScottMastro/discourse-randomized-banner
 # transpile_js: true

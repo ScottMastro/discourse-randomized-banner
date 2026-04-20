@@ -2,7 +2,7 @@ import Component from "@glimmer/component";
 import { tracked } from "@glimmer/tracking";
 import { concat } from "@ember/helper";
 import { service } from "@ember/service";
-import { htmlSafe } from "@ember/template";
+import { trustHTML } from "@ember/template";
 
 export default class RandomizedBanner extends Component {
   static shouldRender(args, context) {
@@ -40,7 +40,7 @@ export default class RandomizedBanner extends Component {
   <template>
     <div
       id="randomized-banner-container"
-      style={{htmlSafe
+      style={{trustHTML
         (concat
           "aspect-ratio:"
           this.siteSettings.banner_aspect_ratio

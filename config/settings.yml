@@ -1,4 +1,4 @@
-plugins:
+randomized_banner:
   enable_randomized_banner:
     default: true
     client: true
